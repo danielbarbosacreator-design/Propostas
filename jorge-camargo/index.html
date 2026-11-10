@@ -164,6 +164,18 @@ p{color:var(--ink-2)}
 .note::before{content:"";flex:0 0 3px;border-radius:3px;background:var(--blue)}
 .note b{color:var(--ink)}
 
+/* Deadline */
+.deadline{display:grid;grid-template-columns:92px 1fr;gap:20px;align-items:center;padding:18px;border-radius:18px;background:var(--surface);border:1px solid var(--line);box-shadow:0 18px 40px -30px rgba(31,75,255,.45);position:relative;overflow:hidden}
+.deadline::after{content:"";position:absolute;right:-50px;top:-50px;width:140px;height:140px;border-radius:50%;border:1px solid rgba(31,75,255,.18)}
+.dl-date{display:flex;flex-direction:column;align-items:center;justify-content:center;aspect-ratio:1/1.05;border-radius:14px;background:var(--blue);color:#fff;line-height:1}
+.dl-date small{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.8}
+.dl-date b{font-size:38px;font-weight:600;letter-spacing:-.04em;margin:4px 0 2px;font-variant-numeric:tabular-nums}
+.dl-date span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.dl-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;color:var(--blue)}
+.dl-tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px var(--blue-soft)}
+.dl-text h4{margin:8px 0 6px;font-size:17px}
+.dl-text p{font-size:14px;color:var(--muted);line-height:1.5}
+
 /* Portfolio */
 .pf-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .pf-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
@@ -420,7 +432,14 @@ p{color:var(--ink-2)}
           </div>
           <p class="saving">Até <span>R$&nbsp;658</span> de economia em relação ao valor avulso.</p>
         </div>
-        <div class="note mt-s"><span><b>Proposta válida até 12 de novembro.</b> Fechando até essa data, os 6 posts editáveis entram sem custo. Depois disso, os valores e o bônus podem mudar.</span></div>
+        <div class="deadline mt-s">
+          <div class="dl-date"><small>Até</small><b>12</b><span>Nov</span></div>
+          <div class="dl-text">
+            <span class="dl-tag">Condição especial</span>
+            <h4>6 posts editáveis de bônus</h4>
+            <p>Fechando até quinta-feira, os posts entram sem custo. Depois dessa data, valores e bônus podem mudar.</p>
+          </div>
+        </div>
         <p class="small muted mt-s">Os valores se referem à criação e aos arquivos finais. Impressão e produção de placas, adesivos e uniformes ficam por conta do cliente, com a gráfica de sua escolha.</p>
       </div>
     </div>
